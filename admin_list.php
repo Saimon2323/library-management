@@ -11,7 +11,7 @@ if(isset($_POST['a_id']) && isset($_POST['a_status']) ){
     update_admin_info($a_id, $a_status);
 }
 
-if(isset($_POST['a_id'])){
+if(isset($_POST['a_id']) && !isset($_POST['a_status']) ){
     $a_id = $_POST['a_id'];
     $result = delete_admin($a_id);
     if($result){
