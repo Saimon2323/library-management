@@ -28,10 +28,10 @@ if(!isset($_SESSION['se_admin'])){
     }
 
 
-    $order_id='O'.time();
-    $code= strtoupper(uniqid().generatePIN(2));
-    $pin= generatePIN(3).generatePIN(2);
-    echo $code;
+    // $order_id='O'.time();
+    // $code= strtoupper(uniqid().generatePIN(2));
+    // $pin= generatePIN(3).generatePIN(2);
+    // echo $code;
     ?>
 
     <!DOCTYPE html>
@@ -109,7 +109,7 @@ if(!isset($_SESSION['se_admin'])){
                 </form>
                 <hr/>
 <!--                <h1><a href="cpanel.php">Cpanel</a></h1> -->
-                <b class="color">Copyright @ 2017 Developed by Daanguli Inc.</b>
+                <b class="color">Copyright @ <?= date('Y'); ?> Developed by Daanguli Inc.</b>
 
             </div>
         </div>
