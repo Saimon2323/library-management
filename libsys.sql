@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2019 at 01:16 PM
+-- Generation Time: Nov 20, 2019 at 04:31 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.2.7
 
@@ -39,8 +39,9 @@ CREATE TABLE `libsys_admin` (
 --
 
 INSERT INTO `libsys_admin` (`a_id`, `a_name`, `a_contact`, `a_password`, `a_status`) VALUES
-(3, 'SAIMON', '01515221627', '78efb579cf9555a02eb1bc9b9bb6c8b0', 0),
-(4, 'HASAN', '01822262323', 'b16dc6f31cf996efb7c6e498ffcaeac6', 1);
+(10, 'Abid', '01922262323', '7b47ec1a52f0704f4437070e077ae105', 1),
+(11, 'Mishu', '01726833399', 'a76ac59a6e17a3a04a5d04f4676f4162', 1),
+(12, 'Hasan', '01800001111', 'cc03e747a6afbbcbf8be7668acfebee5', 1);
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,7 @@ CREATE TABLE `libsys_books` (
 --
 
 INSERT INTO `libsys_books` (`b_id`, `b_code`, `b_name`, `b_author`, `b_publishar`, `b_qty`, `b_self`, `b_price`, `b_status`) VALUES
-(1, '100', 'PHP', 0, 0, 0, 10, '250.00', 1),
+(1, '100', 'PHP', 0, 0, 0, 10, '250.00', 0),
 (2, '101', 'JAVA', 0, 0, 99, 11, '222.00', 1),
 (3, '233', 'ANDROID', 0, 0, 0, 5, '778.00', 0),
 (4, '567', 'WORDRESS', 0, 0, 98, 7, '678.00', 1),
@@ -103,7 +104,9 @@ INSERT INTO `libsys_books` (`b_id`, `b_code`, `b_name`, `b_author`, `b_publishar
 (12, '344', 'JAVASCRIPT', 0, 0, 199, 4, '767.00', 1),
 (13, '835', 'PYTHON', 5, 6, 85, 2, '640.00', 1),
 (14, '111000', 'ICT', 4, 6, 50, 14, '330.00', 1),
-(15, '119', 'MA MA MA AND BABA', 9, 1, 10, 5, '118.00', 1);
+(15, '119', 'MA MA MA AND BABA', 9, 1, 10, 5, '118.00', 1),
+(16, '222', 'MISHU SHISHU', 8, 2, 4, 5, '120.00', 1),
+(17, '333', 'NONDITTO NOROKE', 1, 2, 19, 15, '150.00', 1);
 
 -- --------------------------------------------------------
 
@@ -157,7 +160,9 @@ INSERT INTO `libsys_issue` (`i_id`, `i_book_id`, `i_student_id`, `i_check`, `i_d
 (82, 4, 17, 417, '2018-11-07', '2018-11-22', '0000-00-00', '0.00', 1),
 (83, 4, 5, 45, '2018-11-07', '2018-11-22', '0000-00-00', '0.00', 1),
 (84, 13, 5, 135, '2018-11-07', '2018-11-22', '0000-00-00', '0.00', 1),
-(85, 3, 4, 34, '2018-11-07', '2018-11-22', '0000-00-00', '0.00', 1);
+(85, 3, 4, 34, '2018-11-07', '2018-11-22', '0000-00-00', '0.00', 1),
+(86, 16, 1, 161, '2019-10-05', '2019-10-20', '0000-00-00', '0.00', 1),
+(87, 17, 2, 172, '2019-10-21', '2019-11-05', '0000-00-00', '0.00', 1);
 
 -- --------------------------------------------------------
 
@@ -229,7 +234,7 @@ CREATE TABLE `libsys_students` (
 --
 
 INSERT INTO `libsys_students` (`s_id`, `s_code`, `s_name`, `s_dept`, `s_semester`, `s_contact`, `s_password`, `s_status`) VALUES
-(1, 'C102030', 'XYZ', 1, 2, '01316377019', 'DSFADSFADSFASDFASDFADSFASDFASDFAASDFA', 0),
+(1, 'C102030', 'XYZ', 1, 2, '01316377019', 'DSFADSFADSFASDFASDFADSFASDFASDFAASDFA', 1),
 (2, 'C12345', 'Rakib', 2, 1, '00934243423', 'FDSFSDAFDSDSAFFDFFSADFADSFDSFFASDD', 1),
 (3, 'C546766', 'Abid', 1, 1, '454545477567', 'RTTTTTTTRTTTTTFSDFDSGDSGDGDFGFDSG', 0),
 (4, 'C56556', 'Emon', 1, 5, '934543405340', 'TTSDGDGSDSDFGFDSGDGSTFHJ', 1),
@@ -240,7 +245,9 @@ INSERT INTO `libsys_students` (`s_id`, `s_code`, `s_name`, `s_dept`, `s_semester
 (11, '107', 'ASLKDFJLAKJD', 3, 0, 'rana93ctg', '698d51a19d8a121ce581499d7b701668', 0),
 (12, '999', 'DEDAR', 2, 0, '0128288', '202cb962ac59075b964b07152d234b70', 1),
 (17, 'C151022', 'MUHAMMAD HASAN', 3, 0, '01822262323', '827ccb0eea8a706c4c34a16891f84e7b', 1),
-(18, 'C141023', 'BODIUR RAHMAN', 3, 0, '01551478963', '331391f1a210be88682bb8c71550b54b', 0);
+(18, 'C141023', 'BODIUR RAHMAN', 3, 0, '01551478963', '331391f1a210be88682bb8c71550b54b', 0),
+(19, 'C151023', 'ABDUR RAHMAN MISSION', 2, 0, '01726833399', 'a76ac59a6e17a3a04a5d04f4676f4162', 1),
+(21, 'C141022', 'SAIMON UDDIN', 3, 0, '01820289664', 'cca07bda05121b0035484a9b6232439b', 0);
 
 --
 -- Indexes for dumped tables
@@ -310,7 +317,7 @@ ALTER TABLE `libsys_students`
 -- AUTO_INCREMENT for table `libsys_admin`
 --
 ALTER TABLE `libsys_admin`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `libsys_author`
 --
@@ -320,7 +327,7 @@ ALTER TABLE `libsys_author`
 -- AUTO_INCREMENT for table `libsys_books`
 --
 ALTER TABLE `libsys_books`
-  MODIFY `b_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `b_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `libsys_departments`
 --
@@ -330,7 +337,7 @@ ALTER TABLE `libsys_departments`
 -- AUTO_INCREMENT for table `libsys_issue`
 --
 ALTER TABLE `libsys_issue`
-  MODIFY `i_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `i_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT for table `libsys_publisher`
 --
@@ -345,7 +352,7 @@ ALTER TABLE `libsys_semester`
 -- AUTO_INCREMENT for table `libsys_students`
 --
 ALTER TABLE `libsys_students`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
